@@ -5,6 +5,8 @@ public class ArraySorting {
 
         ArraySorting as = new ArraySorting();
         as.sort();
+
+        Sorting quicksort= ()-> System.out.println("Quick Sorting");
     }
 
     private void sort(){
