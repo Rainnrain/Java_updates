@@ -2,7 +2,7 @@ package com.cydeo;
 
 import java.util.function.*;
 
-public class FunctionalInterface {
+public class FunctionalInterfaceEx {
     public static void main(String[] args) {
 
         System.out.println("************        PREDICATE          *************");
