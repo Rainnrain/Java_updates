@@ -10,6 +10,7 @@ import lombok.ToString;
 @ToString
 
 public class Apple {
+
     private int weight;
     private Color color;
 
