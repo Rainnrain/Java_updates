@@ -13,5 +13,7 @@ public class Member {
 
     String name;
     Integer age;
+    private Gender gender;
+    private String emailAddress;
 
 }

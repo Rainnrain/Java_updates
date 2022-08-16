@@ -7,10 +7,10 @@ public class Main {
     public static void main(String[] args) {
 
         List<Member> memberList= new ArrayList<>();
-        memberList.add(new Member("Lorraine", 18));
-        memberList.add(new Member("Ramazan", 25));
+        memberList.add(new Member("Lorraine", 18, Gender.FEMALE, "lor@gmail.com"));
+        memberList.add(new Member("Ramazan", 25, Gender.MALE, "rcet@gmail.com"));
 
-        Message message = member ->(member.getAge()>=18 && member.getAge()<=25);
+        Message message = member -> member.getGender()==Gender.MALE&& member.getAge()>=18 && member.getAge()<=25;
 
 
         text(message, memberList);
@@ -21,6 +21,7 @@ public class Main {
         for(Member each: memberList){
                 if(message.msg(each)){
                     System.out.println("Hi, please come by my office today "+ each.getName());
+
                 }
          }
      }

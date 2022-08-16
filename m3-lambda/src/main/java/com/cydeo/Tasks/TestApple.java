@@ -21,7 +21,10 @@ public class TestApple {
                 prettyPrintApple(appleList, new AppleHeavy());
 
 
-                ApplePredicate appleCol=(apple)-> "A "+ apple.getAppleColor()+" apple";
+                ApplePredicate appleCol=(apple)-> {
+                        String ans= apple.getAppleWeight()>200?"heavy":"light";
+                       return "A "+ ans+" "+apple.getAppleColor()+" apple";
+                };
 
                 // Created ApplePredicate obj that implements the abstract method of the interface
                 // This mean we don't need to implement the method in the child class, it can be done
@@ -29,7 +32,7 @@ public class TestApple {
 
                 ApplePredicate appleweight=apple->"An apple of "+ apple.getAppleWeight()+" g";
 
-                prettyPrintApple(appleList, appleweight);
+                prettyPrintApple(appleList, appleCol);
         }
 
 
