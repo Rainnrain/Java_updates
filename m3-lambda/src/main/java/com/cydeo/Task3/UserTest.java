@@ -16,10 +16,10 @@ public class UserTest {
         // Print all people whose last name starts with E
 
        // Consumer<User> action = p -> System.out.println(p);
-       // Predicate<User> test = p -> p.getLastName().charAt(0) == 'E';
-        print(p->true, users);
+        Predicate<User> test = p -> p.getLastName().charAt(0) == 'E';
+       // print(p->true, users);
        // print (test, users);
-        print( p->p.getLastName().charAt(0) == 'E', users);
+       // print( p->p.getLastName().charAt(0) == 'E', users);
         //If you do it this way you need to pass the Predicate type in the method parameters.
 
     }

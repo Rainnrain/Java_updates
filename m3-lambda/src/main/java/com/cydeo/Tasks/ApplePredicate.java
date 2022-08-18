@@ -5,4 +5,5 @@ public interface ApplePredicate {
 
    String test (Apple apple);
 
+
 }

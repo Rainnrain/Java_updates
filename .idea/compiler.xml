@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="m2-enum" />
         <module name="m3-lambda" />
+        <module name="m4-double_colon_operators" />
         <module name="m1-generics" />
       </profile>
     </annotationProcessing>

@@ -2,6 +2,7 @@ package com.cydeo.Task2;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.BiFunction;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,6 +13,7 @@ public class Main {
 
         Message message = member -> member.getGender()==Gender.MALE&& member.getAge()>=18 && member.getAge()<=25;
 
+        text( p->p.getGender() == Gender.MALE && p.getAge() >= 18 && p.getAge() <= 25,memberList);
 
         text(message, memberList);
     }
