@@ -10,9 +10,9 @@ public class AppleTest {
     public static void main(String[] args) {
 
         List<Apple> inventory = new ArrayList<Apple>();
-        inventory.add(new Apple(300, Color.GREEN));
+        inventory.add(new Apple(300, Color.RED));
         inventory.add(new Apple(100, Color.RED));
-        inventory.add(new Apple(200, Color.GREEN));
+        inventory.add(new Apple(300, Color.GREEN));
         inventory.add(new Apple(50, Color.RED));
 
         Comparator <Apple> sortApple = comparing((Apple apple)->apple.getWeight());
@@ -21,5 +21,20 @@ public class AppleTest {
 
         inventory.sort(comparing(Apple::getWeight));
         System.out.println(inventory);
+
+        //Reversed
+
+        inventory.sort(comparing(Apple::getWeight).reversed());
+        System.out.println(inventory);
+
+        // Chaining
+        inventory
+                .sort(comparing(Apple::getWeight)
+                        .reversed()
+                       .thenComparing(Apple::getColor));
+
+        System.out.println(inventory);
+
+
     }
 }

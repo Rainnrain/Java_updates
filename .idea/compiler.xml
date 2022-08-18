@@ -12,6 +12,7 @@
         <module name="m3-lambda" />
         <module name="m4-double_colon_operators" />
         <module name="m1-generics" />
+        <module name="m6-stream" />
       </profile>
     </annotationProcessing>
   </component>
