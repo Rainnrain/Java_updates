@@ -48,6 +48,6 @@ public class DishTask {
 
        Stream <Dish> dishStream = DishData.getAll().stream();
 
-        System.out.println(dishStream.toString());
+
     }
 }
