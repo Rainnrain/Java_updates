@@ -45,5 +45,9 @@ public class DishTask {
               // .sorted(comparing(Dish::getCalories).reversed()) - reverses the order
                 .map(Dish::getName)
                 .forEach(System.out::println);
+
+       Stream <Dish> dishStream = DishData.getAll().stream();
+
+        System.out.println(dishStream.toString());
     }
 }
