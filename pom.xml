@@ -16,6 +16,7 @@
         <module>m5-comparator-Interface</module>
         <module>m6-stream</module>
         <module>stream</module>
+        <module>m7-optional-bigdecimal</module>
     </modules>
 
     <properties>
