@@ -21,11 +21,14 @@ public class GuestTask {
                                         // whe want to collect only the first name in a list
                                         Collectors.mapping(o -> o.getName(), Collectors.toList())),
                                 // second collector, we want the total number of participants
-                                Collectors.summingInt(Guest::getParticipantsNumber),
+                                Collectors.filtering(p->p.isParticipating(),Collectors.summingInt
+                                        (Guest::getParticipantsNumber)),
                                 // we merge the collectors in a new Object,
                                 // the values are implicitly passed
                                 EventParticipation::new
                         ));
+
+
 
         System.out.println(result);
 
